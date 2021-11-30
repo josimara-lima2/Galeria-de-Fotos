@@ -37,6 +37,10 @@ const App = () => {
       }
   }
 
+  function teste(item:Photo) {
+    
+  }
+
   
   return (
     <C.Container>
@@ -58,11 +62,19 @@ const App = () => {
         }
         {!loading && 
           <C.PhotoList>
+            
             {photos.map((item, index) => (
-             <PhotoItem key={index} url={item.url} name={item.name}/>
+            <C.ButtonDelete>
+              <button onClick={e => {
+                  Photos.deleteFile(item)
+              }}>x</button>
+              <PhotoItem key={index} name={item.name} url={item.url}/>
               
+            </C.ButtonDelete>
+             
             
             ))}
+            
           </C.PhotoList>
         }
         {!loading && photos.length === 0 && 

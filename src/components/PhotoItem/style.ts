@@ -13,8 +13,3 @@ export const Container = styled.div`
     }
 `
 
-export const ButtonDelete = styled.button`
-
-    margin:0;
-    background-color:#ccc;
-`

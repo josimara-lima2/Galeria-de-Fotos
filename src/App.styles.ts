@@ -57,6 +57,14 @@ export const UploadForm = styled.form`
     }
 `
 
-export const ButtonDelete = styled.button`
+export const ButtonDelete = styled.div`
 
+    background-color: #3D3F43;
+    border-radius:10px;
+    padding:10px;
+
+    button{
+        background-color:#CCC;
+        margin-top:5px;
+    }
 `
