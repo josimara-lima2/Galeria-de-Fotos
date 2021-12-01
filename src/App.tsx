@@ -66,7 +66,11 @@ const App = () => {
             {photos.map((item, index) => (
             <C.ButtonDelete>
               <button onClick={e => {
-                  Photos.deleteFile(item)
+                  Photos.deleteFile(item) 
+                  let newList = [...photos]
+                  newList.splice(index,1)
+                  setPhotos(newList)
+                  
               }}>x</button>
               <PhotoItem key={index} name={item.name} url={item.url}/>
               
